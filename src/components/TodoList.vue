@@ -27,7 +27,7 @@
       {id: 1, task: 'First task', done: true},
       {id: 2, task: 'Second task', done: false}
     ]
-    addTodo (newtodo) {
+    addTodo (newtodo:string) {
       this.todos.push(new Todo(this.todos.length + 1, newtodo, false))
     }
   }

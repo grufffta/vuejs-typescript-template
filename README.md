@@ -1,6 +1,6 @@
-# vue-ts-todo
+# TypeScript VueJS template based vue-ts-todo
 
-> Todolist with Typescript in Vue
+> Based on the Todolist with Typescript in Vue
 
 ## Build Setup
 

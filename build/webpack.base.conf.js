@@ -36,13 +36,16 @@ module.exports = {
         }
       },
       {
-        test: /\.(js|vue)$/,
-        loader: 'eslint-loader',
+        test: /\.tsx$/,
+        loader: 'babel-loader!ts-loader',
+        exclude: /node_modules/,
+        options: { appendTsxSuffixTo: [/tsx\.vue$/] }
+      },
+      {
+        test: /\.(ts|tsx|vue.ts|vue.tsx)$/,
+        loader: 'tslint-loader',
         enforce: 'pre',
-        include: [resolve('src'), resolve('test')],
-        options: {
-          formatter: require('eslint-friendly-formatter')
-        }
+        include: [resolve('src'), resolve('test')]
       },
       {
         test: /\.vue$/,
