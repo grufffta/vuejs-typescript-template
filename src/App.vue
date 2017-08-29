@@ -1,25 +1,25 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <navbar>
+      <h1 slot="brand">
+        Site Header
+      </h1>
+      <router-link to="/" class="navbar-item is-tab">Home</router-link>
+      <router-link to="/" class="navbar-item is-tab">Contact</router-link>
+    </navbar>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-
+import 'bulma'
+import Navbar from './components/bulma/Navbar'
 export default {
   name: 'App',
-  components: {}
+  components: { Navbar }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
